@@ -15,7 +15,14 @@ limitations under the License.
 */
 
 /*
-This file provides a compatability layer for velero util package for azure storage
+This file provides a compatability layer for velero util package to support using our new
+
+	getCloudConfiguration which supports AzureStackHub and Custom clouds.
+
+Additionally, we support setting a specific APIVersion in the ClientOptions to provide compatability
+
+	for these custom clouds which may not suppor the same api versions that the azure-sdk-for-go is using.
+
 ref. https://github.com/vmware-tanzu/velero/blob/main/pkg/util/azure/storage.go
 */
 package util
